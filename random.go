@@ -18,6 +18,13 @@ func RandomClosed(min int, max int) int {
 	return rand.Intn(max-min+1) + min
 }
 
+func RandClosed(min int32, max int32) int32 {
+	if min > max {
+		min, max = max, min
+	}
+	return rand.Int31n(max-min+1) + min
+}
+
 //RandomSemiClosed get random num [min,max)
 func RandomSemiClosed(min int, max int) int {
 	if min > max {
@@ -27,6 +34,17 @@ func RandomSemiClosed(min int, max int) int {
 		return min
 	}
 	return rand.Intn(max-min) + min
+}
+
+func RandSemiClosed(min int32, max int32) int32 {
+	if min == max {
+		return min
+	}
+
+	if min > max {
+		min, max = max, min
+	}
+	return rand.Int31n(max-min) + min
 }
 
 //RandomFloat get random num [min,max]
@@ -47,6 +65,14 @@ func RandCheck(ratio int, base int) bool {
 	//[0,base)
 	randNum := rand.Intn(base)
 	return ratio > randNum
+}
+
+func RandOk(ratio int32, base int32) bool {
+	if base <= 0 {
+		return false
+	}
+	//[0,base)
+	return ratio > rand.Int31n(base)
 }
 
 //GetRandomElement 使用轮盘算法随机从容器中获取一个元素 元素必须实现IWheelItem接口

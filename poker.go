@@ -1,7 +1,7 @@
 package util
 
 import (
-	"airbattle/internal/logic/define"
+	"github.com/cyruslo/util/define"
 	"strconv"
 )
 
