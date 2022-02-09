@@ -1,0 +1,51 @@
+package define
+
+//打死扑克飞机后扑克掉落张数
+const DROP_POKER_NUM = 3
+
+//扑克牌型定义
+const (
+	POKER_KIND_NONE = iota
+	//对子
+	POKER_KIND_PAIR
+	//顺子
+	POKER_KIND_STRAIGHT
+	//同花
+	POKER_KIND_FLUSH
+	//同花顺
+	POKER_KIND_STRAIGHT_FLUSH
+	//三条 豹子
+	POKER_KIND_THREE_OF_A_KIND
+)
+
+const DICE_MIN_POINT = 1
+const DICE_MAX_POINT = 6
+
+//扑克花色
+const (
+	//方块
+	COLOR_DIAMOND = iota
+	//草花
+	COLOR_CLUB
+	//红心
+	COLOR_HEART
+	//黑桃
+	COLOR_SPADE
+)
+
+//扑克点数
+const (
+	POINT_ACE = iota + 1
+	POINT_TWO
+	POINT_THREE
+	POINT_FOUR
+	POINT_FIVE
+	POINT_SIX
+	POINT_SEVEN
+	POINT_EIGHT
+	POINT_NINE
+	POINT_TEN
+	POINT_J
+	POINT_Q
+	POINT_K
+)

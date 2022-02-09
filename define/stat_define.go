@@ -1,0 +1,113 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-06 14:10:29
+ * @LastEditTime: 2021-05-11 14:59:35
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \airbattle\internal\logic\logcache\stat_define.go
+ */
+package define
+
+const (
+	STAT_TYPE_INVALID = -1
+	//捕获总计
+	STAT_TYPE_CAPTURE = 0
+	//普通怪物
+	STAT_TYPE_NORMAL_MONSTER = 10
+	//普通子弹
+	STAT_TYPE_NORMAL_BULLET = 11
+	//黑洞怪物
+	STAT_TYPE_BLACK_HOLE_MONSTER = 20
+	//黑洞子弹
+	STAT_TYPE_BLACK_HOLE_BULLET = 21
+	//爆炸怪物
+	STAT_TYPE_EXPLODE_MONSTER = 30
+	//爆炸子弹
+	STAT_TYPE_EXPLODE_BULLET = 31
+	//转盘怪物
+	STAT_TYPE_ROULETTE_MONSTER = 40
+	//小丑怪物
+	STAT_TYPE_POKER_MONSTER = 50
+	//连锁怪物
+	STAT_TYPE_CHAIN_MONSTER = 60
+	//buff怪物
+	STAT_TYPE_BUFF_MONSTER = 70
+	//宝箱(卡牌)怪物
+	STAT_TYPE_TREASURE_MONSTER = 80
+	//飞船怪物
+	STAT_TYPE_CRAFT_MONSTER = 90
+	//机关枪怪物
+	STAT_TYPE_GUN_MONSTER = 91
+	//幸运轮
+	STAT_TYPE_FORTUNE_MONSTER = 92
+	//免费子弹 此类型 + buff id为各种buff子弹细则
+	STAT_TYPE_FREE_BULLET_BASE = 100
+	//损失值 加到金币
+	STAT_TYPE_REFUND_VALUE = 200
+	//损失值 加到暗送袋子里
+	STAT_TYPE_LOSE_VALUE = 201
+	//返还金币类型基址
+	STAT_TYPE_REFUND_BASE = 210
+	//损失类型基址
+	STAT_TYPE_LOSE_BASE = 220
+	//暗送
+	STAT_TYPE_GIVE = 300
+	//微信首次登录暗送
+	STAT_TYPE_GIVE_WECHAT = 301
+	//充值暗送
+	STAT_TYPE_GIVE_RECHARGE = 302
+	//损失价值暗送
+	STAT_TYPE_GIVE_LOST = 303
+	//掉落刮刮卡
+	STAT_TYPE_DROP_CARD = 400
+	//使用刮刮卡
+	STAT_TYPE_USE_CARD = 401
+	//玩家互动
+	STAT_TYPE_INTERACTION = 500
+	//使用导弹
+	STAT_TYPE_USE_MISSILE = 600
+	//奖池抽奖
+	STAT_TYPE_DRAW_POOL = 700
+	//C值变动
+	STAT_TYPE_DEFICIT = 800
+	//存钱罐积累
+	STAT_TYPE_PIGGY_BANK_EARN = 900
+	//存钱罐使用
+	STAT_TYPE_PIGGY_BANK_OPEN = 901
+	//击中时掉落宝箱(卡牌)
+	STAT_TYPE_ON_HIT_DROP_TREASURE = 1000
+	//消耗武器碎片
+	STAT_TYPE_COST_WEAPON_PIECE = 1100
+	//武器炮台子弹基址 此类型 + 武器id = 各项子弹细则
+	STAT_TYPE_WEAPON_BULLET_BASE = 1200
+	//比赛支出收益
+	STAT_TYPE_MATCH = 1300
+	//比赛礼包支出基址 此类型 + 礼物id = 各项礼物细则
+	STAT_TYPE_GIFT_COST_BASE = 1310
+	//比赛排行奖励金币
+	STAT_TYPE_MATCH_RANK_REWARD_MONEY = 1320
+	//比赛排行奖励导弹
+	STAT_TYPE_MATCH_RANK_REWARD_MISSILE = 1321
+	//比赛幸运奖励金币
+	STAT_TYPE_MATCH_LUCKY_REWARD_MONEY = 1330
+	//比赛任务奖金币
+	STAT_TYPE_MATCH_SPLIT_REWARD_MONEY = 1331
+	//开启红包
+	STAT_TYPE_OPEN_RED_ENVELOPE = 1400
+	//开启公共红包
+	STAT_TYPE_OPEN_COMMON_RED_ENVELOPE = 1500
+	//断开异常socket
+	STAT_TYPE_CLEAR_LOGIN_FAIL_SOCKET = 10000
+
+	//特殊模式武器
+	STAT_TYPE_MODE_WEAPON = 1600
+	//机关枪
+	STAT_TYPE_GUN = 1700
+	//特殊炮台支出
+	STAT_TYPE_SPEC_BATTERY = 1800
+)
+
+const (
+	STAT_ADD = 1
+	STAT_SET = 2
+)
