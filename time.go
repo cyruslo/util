@@ -5,32 +5,6 @@ import (
 	"time"
 )
 
-func GetTimeStamp() int64 {
-	return time.Now().Unix()
-}
-
-func GetTimeStampMs() int64 {
-	return time.Now().UnixNano() / (1000 * 1000)
-}
-
-func GetDate() string {
-	return FormatDate(GetTimeStamp())
-}
-
-func GetDay() string {
-	return FormatDay(GetTimeStamp())
-}
-
-func FormatDate(timestamp int64) string {
-	timeTemplate := "2006-01-02 15:04:05"
-	return time.Unix(timestamp, 0).Format(timeTemplate)
-}
-
-func FormatDay(timestamp int64) string {
-	timeTemplate := "2006-01-02"
-	return time.Unix(timestamp, 0).Format(timeTemplate)
-}
-
 func ParseTimeStamp(date string, typo TimeLayoutType) (t int64, err error) {
 	switch typo {
 	case FORMAT_LAYOUT_TIME:
